@@ -1,0 +1,76 @@
+﻿<Window x:Class="nnguyen6831_A4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:nnguyen6831_A4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel >
+        <StackPanel Name="Welcome">
+            <TextBlock Text="Answer Questions Game" HorizontalAlignment="Center" Margin="0,30"></TextBlock>
+            <StackPanel HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Text="Hello!"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="What is your name?"></Label>
+                    <TextBox Name="PlayerName" Width="150" ></TextBox>
+                </StackPanel>
+                
+                <TextBlock Name="ErrorMsg" Foreground="Red"/>
+            </StackPanel>
+            <Button Name="StartGame" Content="Let's play!" HorizontalAlignment="Center" Click="StartGame_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="GamePlay" Visibility="Collapsed">
+            <StackPanel  Background="#FF2980B9" Width="500" >
+                <TextBlock  Name="WelcomePlayer" Text="Nghia" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </StackPanel>
+            
+            <StackPanel HorizontalAlignment="Center" Width="500">
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,10">
+                    <TextBlock Text="Time: ">
+                    </TextBlock>
+                    <TextBlock Name="PointCount" >
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel >
+                    <Label Name="QuestionNumber" />
+                    <StackPanel Name="AnswerQuestion" Margin="30,0">
+                        <TextBlock Name="Question" Text="what is you name?" TextWrapping="Wrap"></TextBlock>
+                        <ListBox x:Name="Answers" BorderThickness="0" >
+
+                        </ListBox>
+                        <TextBlock Name="SelectedErrorMsg" Foreground="Red" Text="" ></TextBlock>   
+                    </StackPanel>
+                    
+                </StackPanel>
+                
+                
+            </StackPanel>
+
+            <Button x:Name="SubmitAnswer" Content="Submit your answer!" HorizontalAlignment="Center" Margin="0,20" Click="AnswerSubmit_Click"/>
+            <Button Name="CompleteGame" Content="Complete!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20" Visibility="Collapsed" Click="CompleteGame_Click"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="AnswersForQuestionsViewer" Visibility="Collapsed" Height="410" VerticalScrollBarVisibility="auto">
+            <StackPanel Name="AnswersForQuestions" Visibility="Collapsed" >
+                   
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Name="LeaderBoard" Visibility="Collapsed" HorizontalAlignment="Center">
+            <StackPanel  Background="#FF2980B9" Width="500" >
+                <TextBlock  Text="Game Leaderboard" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Name="PlayersLeaderBoard" HorizontalAlignment="Center" Margin="0,30" Width="500">
+                
+            </StackPanel>
+        </StackPanel>
+        
+
+        
+    </StackPanel>
+    
+</Window>
