@@ -1,5 +1,5 @@
 # TriviaGame
-This is a trivia game that can be used to help students prepare for the tests.\
+This is a trivia game that can be used to help students prepare for the tests.
 
 Installation and usage instructions for TriviaGame:
 - There is a SQL file named “QuestionsA4” in the debug folder. That SQL file contains ten insert
